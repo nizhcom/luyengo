@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/practice/home",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "GõMười",
+      "hasCanvas": false,
+      "bodyTextLen": 440,
+      "bodyTextHash": "1c4190a89b309d2cbe24ba5cfcb5c442169c392f317d9189384fa2c35733d956",
+      "bodyTextPrefix": "10 GõMười NỀN TẢNG Hàng giữa Gia sư Tốc độ WPM — CHÍNH XÁC 100% ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/practice-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "GõMười",
+      "hasCanvas": false,
+      "bodyTextLen": 440,
+      "bodyTextHash": "1c4190a89b309d2cbe24ba5cfcb5c442169c392f317d9189384fa2c35733d956",
+      "bodyTextPrefix": "10 GõMười NỀN TẢNG Hàng giữa Gia sư Tốc độ WPM — CHÍNH XÁC 100% ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/practice-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/practice-preview.json"
+}

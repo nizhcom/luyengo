@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "GõMười",
+      "hasCanvas": false,
+      "bodyTextLen": 1038,
+      "bodyTextHash": "9c44b93dc392079b9a491b0a388cac1b593236b17722c284adc0c9ea8a4e77ba",
+      "bodyTextPrefix": "10 GõMười Gõ bằng mười ngón, không nhìn phím. Luyện gõ mười ngón",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "GõMười",
+      "hasCanvas": false,
+      "bodyTextLen": 1002,
+      "bodyTextHash": "ee08240b7d794bb0254b222c812e028e8787e105d7aebbafdcd257b637b00a10",
+      "bodyTextPrefix": "10 GõMười Luyện gõ mười ngón Đặt tay đúng, gõ đều, nhanh lên từn",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

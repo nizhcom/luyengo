@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/practice/home",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "GõMười",
+      "hasCanvas": false,
+      "bodyTextLen": 414,
+      "bodyTextHash": "1a407e95583ffe988ce1aaa41fb1fe664febe39b827ab50e872b3dcf65ee28ef",
+      "bodyTextPrefix": "NỀN TẢNG Hàng giữa — WPM · 100% · 0:00 Gia sư Tốc độ asdfjkl;asd",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/practice-fit2.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "GõMười",
+      "hasCanvas": false,
+      "bodyTextLen": 414,
+      "bodyTextHash": "1a407e95583ffe988ce1aaa41fb1fe664febe39b827ab50e872b3dcf65ee28ef",
+      "bodyTextPrefix": "NỀN TẢNG Hàng giữa — WPM · 100% · 0:00 Gia sư Tốc độ asdfjkl;asd",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/practice-fit2-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/practice-fit2.json"
+}

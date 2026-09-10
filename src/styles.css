@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #e7f1ff;
+  --color-surface: #ffffff;
+  --color-ice: #f3f8ff;
+  --color-fg: #163456;
+  --color-muted: #5c7594;
+  --color-ink: #0b2a4a;
+  --color-primary: #1d7bf5;
+  --color-primary-hover: #1566d6;
+  --color-primary-foreground: #ffffff;
+  --color-good: #0f9f6e;
+  --color-bad: #e11d48;
+  --color-key: #ffffff;
+  --color-key-muted: #d9e6f6;
+  --color-key-label: #163456;
+
+  --font-sans: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Fraunces", "Be Vietnam Pro", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 1.75rem;
+  --radius-3xl: 1.75rem;
+
+  --shadow-border:
+    0 0 0 1px rgb(15 58 110 / 0.07),
+    0 1px 2px -1px rgb(15 58 110 / 0.06),
+    0 8px 24px -16px rgb(29 123 245 / 0.35);
+  --shadow-border-hover:
+    0 0 0 1px rgb(15 58 110 / 0.1),
+    0 10px 28px -16px rgb(29 123 245 / 0.45);
+  --shadow-soft: 0 10px 24px -12px rgb(29 123 245 / 0.55);
+
+  --kb-gap: 6px;
+  --kb-key-h: 2.65rem;
+  --kb-radius: 0.7rem;
+
+  --motion-quick: 150ms;
+  --motion-fast: 250ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    min-height: 100dvh;
+    background:
+      radial-gradient(1200px 480px at 8% -10%, rgb(29 123 245 / 0.18), transparent 60%),
+      radial-gradient(900px 420px at 100% 0%, rgb(29 123 245 / 0.1), transparent 55%),
+      var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+.kb {
+  display: flex;
+  flex-direction: column;
+}
+
+.kb-row {
+  display: flex;
+  width: 100%;
+}
+
+.kb-key {
+  box-sizing: border-box;
+  height: var(--kb-key-h);
+  min-width: 0;
+  border: 0;
+  border-radius: var(--kb-radius);
+  background: var(--color-key);
+  color: var(--color-key-label);
+  box-shadow:
+    0 0 0 1px rgb(15 58 110 / 0.08),
+    0 1px 0 rgb(15 58 110 / 0.04),
+    inset 0 -2px 0 rgb(15 58 110 / 0.06);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1;
+  transition:
+    transform var(--motion-quick) var(--ease-out),
+    background-color var(--motion-quick) var(--ease-out),
+    color var(--motion-quick) var(--ease-out),
+    box-shadow var(--motion-quick) var(--ease-out);
+}
+
+.kb-key-mod {
+  background: var(--color-key-muted);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  color: var(--color-fg);
+}
+
+.kb-key-target {
+  background: var(--color-primary);
+  color: var(--color-primary-foreground);
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-1px);
+}
+
+.kb-key-target.kb-key-mod {
+  background: var(--color-primary);
+  color: var(--color-primary-foreground);
+}
+
+.kb-key-pressed {
+  transform: translateY(1px);
+  box-shadow:
+    0 0 0 1px rgb(15 58 110 / 0.1),
+    inset 0 1px 0 rgb(15 58 110 / 0.08);
+}
+
+.kb-key-wrong {
+  background: var(--color-bad);
+  color: var(--color-primary-foreground);
+}
+
+.kb-bump {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  width: 10px;
+  height: 2px;
+  border-radius: 99px;
+  background: currentColor;
+  opacity: 0.35;
+  transform: translateX(-50%);
+}
+
+.typing-text {
+  margin: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.typing-ch {
+  display: inline-block;
+  min-width: 0.12em;
+  padding: 0 0.02em;
+  border-radius: 0.35rem;
+  vertical-align: bottom;
+}
+
+.typing-space {
+  width: 0.55em;
+}
+
+.typing-current {
+  background: var(--color-primary);
+  color: var(--color-primary-foreground);
+  box-shadow: 0 0 0 1px rgb(29 123 245 / 0.15);
+  animation: caret-pulse 1.1s var(--ease-out) infinite;
+}
+
+.typing-ok {
+  color: var(--color-good);
+}
+
+.typing-bad {
+  color: var(--color-bad);
+  background: rgb(225 29 72 / 0.08);
+}
+
+.typing-wait {
+  color: rgb(22 52 86 / 0.42);
+}
+
+.typing-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(29 123 245 / 0.35) transparent;
+}
+
+@keyframes caret-pulse {
+  0%,
+  100% {
+    filter: none;
+  }
+  50% {
+    filter: brightness(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typing-current,
+  .kb-key {
+    animation: none;
+    transition: none;
+  }
+}
